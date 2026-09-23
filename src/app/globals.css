@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+@theme {
+  --color-faso-red: #ef3340;
+  --color-faso-green: #009739;
+  --color-faso-gold: #ffcd00;
+  --color-ink: #16241c;
+  --color-ink-soft: #47564d;
+  --color-surface: #f7f8f4;
+  --color-border: #e4e7df;
+}
+
+body {
+  background-color: var(--color-surface);
+  color: var(--color-ink);
+  font-family: var(--font-ibm-plex-sans, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-space-grotesk, system-ui, sans-serif);
+}
