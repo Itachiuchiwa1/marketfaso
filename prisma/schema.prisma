@@ -88,6 +88,10 @@ model Vendeur {
   utilisateur   Utilisateur @relation(fields: [utilisateurId], references: [id])
   nomBoutique   String
   description   String?
+  ville         String?     @default("Ouagadougou")
+  adresse       String?
+  secteur       String?
+  telephonePro  String?
 
   produits      Produit[]
 

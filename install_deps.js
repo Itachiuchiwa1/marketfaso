@@ -1,5 +1,4 @@
 const { execSync } = require('child_process');
-const path = require('path');
 
 const nodeDir = 'C:\\Program Files\\nodejs';
 const env = {
@@ -7,15 +6,8 @@ const env = {
   PATH: `${nodeDir};${process.env.PATH || ''}`
 };
 
-console.log('Installing dependencies...');
-execSync('npm install prisma @prisma/client @prisma/adapter-pg pg dotenv next-auth@beta bcryptjs zod lucide-react clsx', {
-  cwd: __dirname,
-  stdio: 'inherit',
-  env
-});
-
-console.log('Installing dev dependencies...');
-execSync('npm install -D @types/pg tsx @types/bcryptjs', {
+console.log('Installing dependencies with --legacy-peer-deps...');
+execSync('npm install --legacy-peer-deps', {
   cwd: __dirname,
   stdio: 'inherit',
   env
